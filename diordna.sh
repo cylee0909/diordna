@@ -14,7 +14,7 @@ if [ ! -f "$1" ] || [ ! -e "$1" ]; then
 	exit 1
 fi
 
-if [ $# == 1 ] || [ $2 == "" ]; then
+if [ -z "$2" ]; then
 	echo "Using jd-jui decompile..."
 	tar -jxv -f $1 -C "$current" classes.dex
 	bash "$current/"dex2jar/d2j-dex2jar.sh --force "$current/"classes.dex -o "$current/"out.jar 
