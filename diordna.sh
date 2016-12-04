@@ -1,6 +1,7 @@
 #/bin/bash
 # Android反编译工具 for linux/mac
 # author eyescylee@163.com
+
 current=`dirname $0`
 function phelp() {
 	echo "using diordna.sh apkpath [-d] to decompile apk file"
